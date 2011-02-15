@@ -8,14 +8,13 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Sosbichos
   class Application < Rails::Application
-  config.generators do |g|
-  g.template_engine :haml
-  g.test_framework  :rspec, :fixture => false, :views => false
-  g.fixture_replacement :factory_girl, :dir => "spec/factories"
-end
 
-config.action_mailer.default_url_options = { :host => "localhost:3000" }
+    config.generators do |g|
+      g.test_framework  :rspec, :fixture => false, :views => false
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
 
+    config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
