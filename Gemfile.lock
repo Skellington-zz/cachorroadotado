@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    ZenTest (4.4.2)
     abstract (1.0.0)
     actionmailer (3.0.4)
       actionpack (= 3.0.4)
@@ -119,6 +120,7 @@ GEM
       thor (~> 0.14.4)
     rake (0.8.7)
     rcov (0.9.9)
+    redgreen (1.2.2)
     responders (0.6.2)
     rspec (2.1.0)
       rspec-core (~> 2.1.0)
@@ -170,6 +172,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ZenTest
   acts-as-taggable-on (= 2.0.6)
   aws-s3
   capybara (= 0.4.0)
@@ -186,6 +189,7 @@ DEPENDENCIES
   paperclip (= 2.3.8)
   rails (= 3.0.4)
   rcov
+  redgreen
   responders (= 0.6.2)
   rspec (= 2.1.0)
   rspec-rails (= 2.1.0)

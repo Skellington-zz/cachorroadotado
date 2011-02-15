@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Superfolio</title>
+  <%= stylesheet_link_tag "admin/admin" %>
+  <%= javascript_include_tag "common/jquery.min.js", "common/jquery-ui.min.js" %>
+  <%= javascript_include_tag "rails", "admin/admin" %>
+  <%= favicon %>
+  <%= csrf_meta_tag %>
+
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <div id="sidebar">
+      <%= menu :id=>"main_menu", :class=>"menu" do |m| %>
+        <%= m.profiles "Profiles", admin_profiles_path %> 
+      <% end %>
+    </div>
+
+    <%= menu :id=>"secondary_menu", :class=>"menu" do |m| %>
+      <%= m.logout "#{destroy_user_session_path}" do %>
+        <%= image_tag "icon_docs.png" %> Log out
+      <% end %>
+    <% end %>
+
+    <div id="content">
+
+      <div class="box_container">
+        <div class="box_inner_container">
+          <div class="box">
+            <%= yield :submenu %>
+
+             <div class="box_body">
+               <%= flash_messages %>
+
+               <%= yield %>
+             </div>
+             <br/>
+          </div>
+        </div><!-- end .box_inner_container -->
+      </div> <!-- end .box_container -->
+
+    </div> <!-- end #content -->
+  </div> <!-- end #wrapper -->
+
+  <%= analytics "UA-19159130-1" %>
+
+</body>
+</html>

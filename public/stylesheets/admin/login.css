@@ -1,0 +1,46 @@
+@import "/stylesheets/common/reset.css";
+@import "/stylesheets/common/common.css";
+@import "/stylesheets/admin/common.css";
+
+body {
+  font-size: 14px;
+  font-family: helvetica, arial, sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  background-color: #E7E7E7 !important;
+  text-align:center;
+  background: url(/images/body_bg.jpg) repeat;  
+}
+
+a {
+  color: #1C4FAD;
+  text-decoration: none;
+}
+
+div#wrapper {
+  text-align: left;
+  margin: 0 auto;
+  width: 960px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* content */
+
+div#content {
+  background: #FFF;
+
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+
+  -webkit-box-shadow: #A5A5A5 0 0 5px;
+  -moz-box-shadow: #A5A5A5 0 0 5px;
+  box-shadow: #A5A5A5 0 0 5px;
+
+  padding:5px 20px 20px 20px;
+  margin: 20px 5px;
+  overflow: hidden;
+}

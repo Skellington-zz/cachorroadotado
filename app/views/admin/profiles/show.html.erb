@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @profile.description %>
+</p>
+
+<p>
+  <b>Race:</b>
+  <%= @profile.race %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @profile.sex %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_profile_path(@profile) %> |
+<%= link_to 'Back', admin_profiles_path %>

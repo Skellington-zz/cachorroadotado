@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag('common/wmd.css') %>
+
+<%= form_for([:admin, @profile]) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div id="wmd-editor" class="wmd-panel">
+    <div id="wmd-button-bar" style="margin:0; padding:0 !important;"></div>
+    <%= f.text_area :description, :id => "wmd-input", :rows => 20 %>
+  </div>
+  
+
+  <div class="field">
+    <%= f.label :race %><br />
+    <%= f.text_field :race %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.text_field :sex %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= javascript_include_tag("common/wmd/wmd.js") %>
+<%= javascript_include_tag("common/wmd/showdown.js") %>

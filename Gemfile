@@ -26,6 +26,8 @@ group :development, :test do
   gem 'rcov'
   gem 'cucumber-rails'
   gem 'factory_girl_rails', '1.0'
+  gem 'ZenTest'
+  gem 'redgreen'
 end
 
 group :test do

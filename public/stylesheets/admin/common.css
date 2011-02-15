@@ -1,0 +1,122 @@
+h2 {
+  font-size: 20px;
+  color: #484B52;
+  border-bottom: 2px solid #E7E7E7;
+  margin-bottom: 30px;
+  padding-bottom:15px;
+}
+
+hr.thin {
+  background-color:#DDD;
+  border:medium none;
+  height:1px;
+  margin: 20px 0 20px 0;
+}
+
+hr.thick {
+  background-color:#DDD;
+  border: medium none;
+  height: 2px;
+  margin: 20px 0 20px 0;
+}        
+
+.description {
+  color: #818181;
+}
+
+/*******************
+button
+*******************/
+
+input[type="submit"], input[type="button"], .button {
+  font-size: 14px;
+  display: inline-block;
+  padding: 8px;
+  text-decoration: none;
+
+  border-radius:         5px;
+  -moz-border-radius:    5px;
+  -webkit-border-radius: 5px;
+
+  box-shadow: 1px 1px 0px #FFF;
+  -moz-box-shadow: 1px 1px 0px #FFF;
+  -webkit-box-shadow: 1px 1px 0px #FFF;
+
+  text-shadow: 1px 1px 1px #FFF;
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  position: relative;
+  cursor: pointer;
+  color: #727272;
+  background-image: -moz-linear-gradient(center top, #FFF, #e0e0e0);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#e0e0e0));
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, .button:hover  {
+  background-image: -moz-linear-gradient(center top, #e0e0e0, #FFF);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e0e0e0), to(#FFF));
+}
+
+input[type="submit"]:active, input[type="button"]:active, .button:active { top: 1px; }
+
+/*******************
+form elements
+*******************/
+
+label {
+  display:block;
+  margin: 0;
+  color: #292929;
+  font-weight:bold;  
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+  height: 25px;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="email"], select {
+  background: white url(/images/input_bg.jpg) repeat-x 50% 0%;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #CCC;
+  font-size: 15px;
+  font-family: helvetica, arial, sans-serif;
+}
+
+div.field{
+  margin-bottom: 20px;
+}
+
+textarea, input, select {
+  margin: 1px;
+  padding: 3px;
+}
+
+input, select { line-height: 15px; }
+
+textarea { width: 98%; }
+
+input.title {
+  width: 98%;
+}
+
+.error {
+  clear: left;
+  font-size: 12px;
+  color: #D00;
+  display: block;
+}
+
+.hint {
+  clear: left;
+  font-size: 12px;
+  color: #555;
+  display: block;
+  font-style: italic;
+}
+
+.input {
+  margin-bottom: 10px;
+}

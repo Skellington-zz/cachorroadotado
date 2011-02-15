@@ -1,0 +1,20 @@
+<h2>Listing profiles</h2>
+
+<ul class="list">
+<% @profiles.each do |profile| %>
+  <%= content_tag_for :li, profile, :class => cycle(:odd, :even) do %>
+
+   <h5><%= profile.name.titleize %></h5>
+   <em>( <%= time_ago_in_words profile.created_at %> )</em>
+
+    <div class="right">
+      <%= link_to 'Edit', edit_admin_profile_path(profile) %> |
+      <%= link_to 'Destroy', admin_profile_path(profile), :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  <% end %>
+<% end %>
+</ul>
+
+<hr class="thick" />
+
+<%= link_to 'New Profile', new_admin_profile_path, :class => 'button' %>
