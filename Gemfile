@@ -25,12 +25,12 @@ group :development, :test do
   gem 'ruby-debug'
   gem 'rcov'
   gem 'cucumber-rails'
+  gem 'factory_girl_rails', '1.0'
 end
 
 group :test do
   gem 'capybara', '0.4.0'
   gem 'database_cleaner', '0.6.0'
   gem 'factory_girl'
-  gem 'factory_girl_rails', '1.0'
   gem 'cucumber'
 end
